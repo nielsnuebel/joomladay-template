@@ -1,0 +1,18 @@
+# composer
+composer.phar
+vendor/*
+
+# Robo
+robo.phar
+
+# JoRobo related files
+/dist
+/jbuild.ini
+/jorobo.ini
+RoboFile.ini
+/source
+/build
+/backup/*
+
+# PHPStorm
+.idea/

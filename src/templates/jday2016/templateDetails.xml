@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.5" type="template" client="site">
+	<name>jday2016</name>
+	<creationDate>##DATE##</creationDate>
+	<author>Niels Nübel</author>
+	<authorEmail>niels@niels-nuebel.de</authorEmail>
+	<authorUrl>http://www.niels-nuebel.de</authorUrl>
+	<copyright>Copyright © 2009 - ##YEAR## Niels Nübel.</copyright>
+	<version>##VERSION##</version>
+	<description>TPL_JDAY2016_XML_DESCRIPTION</description>
+
+	<files>
+		##TEMPLATE_FILES##
+	</files>
+
+	<positions>
+		<position>debug</position>
+	</positions>
+
+	<languages folder="language">
+		##LANGUAGE_FILES##
+	</languages>
+</extension>

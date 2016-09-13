@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.5" method="upgrade">
+    <name>pkg_jday2016</name>
+    <packagename>jday2016</packagename>
+    <creationDate>September 2016</creationDate>
+    <packager>Niels Nuebel</packager>
+    <copyright>(C) 2009 - 2016 Niels Nuebel. All rights reserved.</copyright>
+    <packageremail>niels@niels-nuebel.de</packageremail>
+    <packagerurl>www.niels-nuebel.de</packagerurl>
+    <author>Niels Nübel</author>
+    <authorEmail>niels@niels-nuebel.de</authorEmail>
+    <authorUrl>www.niels-nuebel.de</authorUrl>
+    <version>0.0.1</version>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>PKG_JDAY2016_XML_DESCRIPTION</description>
+    <files>
+        <!-- The id for each extension is the element stored in the DB -->
+        <file type="template" id="jday2016" client="site">tpl_jday2016.zip</file>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.pkg_jday2016.sys.ini</language>
+    </languages>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="JDay 2016 Update Site">https://raw.githubusercontent.com/nielsnuebel/joomladay-template/master/manifest.xml</server>
+    </updateservers>
+</extension>
