@@ -5,16 +5,19 @@ $app   = JFactory::getApplication();
 $doc   = JFactory::getDocument();
 $tpath = $this->baseurl . '/templates/' . $this->template;
 
-// Getting params from template
-$params             = $app->getTemplate(true)->params;
-$cssfilename        = $params->get('cssfilename', 'style.css');
-
 // Add CSS and Javascript
-$doc->addStyleSheet($tpath . '/css/' . $cssfilename);
-$doc->addScript($tpath . '/js/script.js');
+$doc->addStyleSheet($tpath . '/css/bootstrap.min.css');
+$doc->addStyleSheet($tpath . '/css/style.css');
+$doc->addScript($tpath . '/js/jquery.min.js');
+$doc->addScript($tpath . '/js/tether.min.js');
+$doc->addScript($tpath . '/js/bootstrap.min.js');
 
 // Headcleaner
 $this->setGenerator(null);
+
+// force latest IE & chrome frame
+$doc->setMetadata('x-ua-compatible','IE=edge,chrome=1');
+$doc->setMetaData('viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no');
 
 $filesjs = array(
 	"media/jui/js/jquery.min.js",
@@ -58,9 +61,18 @@ $doc->_script['text/javascript'] = str_replace(
 		<jdoc:include type="head" />
 	</head>
 	<body>
-		<jdoc:include type="modules" name="logo" />
+	<?php if ($this->countModules('menu')) : ?>
+	<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+		<a class="navbar-brand" href="<?= $this->baseurl; ?>"><?= $app->get('sitename'); ?></a>
+		<jdoc:include type="modules" name="menu" />
+	</nav>
+	<?php endif; ?>
+	<div class="container">
 		<jdoc:include type="message" />
+		<div class="starter-template">
 		<jdoc:include type="component" />
+		</div>
+	</div>
 		<jdoc:include type="modules" name="debug" style="none" />
 	</body>
 </html>
