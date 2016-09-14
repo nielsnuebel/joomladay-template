@@ -2,23 +2,44 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.5" type="template" client="site">
 	<name>jday2016</name>
-	<creationDate>##DATE##</creationDate>
+	<creationDate>16.09.2016</creationDate>
 	<author>Niels Nübel</author>
 	<authorEmail>niels@niels-nuebel.de</authorEmail>
 	<authorUrl>http://www.niels-nuebel.de</authorUrl>
-	<copyright>Copyright © 2009 - ##YEAR## Niels Nübel.</copyright>
-	<version>##VERSION##</version>
+	<copyright>Copyright © 2009 - 2016 Niels Nübel.</copyright>
+	<version>0.0.2</version>
 	<description>TPL_JDAY2016_XML_DESCRIPTION</description>
 
 	<files>
-		##TEMPLATE_FILES##
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<file>index.php</file>
+		<file>templateDetails.xml</file>
+		<file>template_preview.png</file>
+		<file>template_thumbnail.png</file>
 	</files>
 
 	<positions>
 		<position>debug</position>
+		<position>logo</position>
 	</positions>
 
-	<languages folder="language">
-		##LANGUAGE_FILES##
-	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<!-- CSSFILENAME -->
+				<field name="cssfilename"
+				type="filelist"
+				default="style.css"
+				label="TPL_JDAY2016_PARAMETER_CSSFILENAME_LABEL"
+				description="TPL_JDAY2016_PARAMETER_CSSFILENAME_DESC"
+				directory="templates/jday2016/css"
+				filter="\.css"
+				striptext="true"
+				hide_none="true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
 </extension>
